@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm install' 
+                sh 'npm install'
+                sh 'npm i firefox'
             }
         }
         stage('Test') {
             steps {
-                sh 'testcafe --list-browsers'
                 sh 'npx cucumber-js features/example_page.feature'
             }
         }
