@@ -8,13 +8,14 @@ pipeline {
         }
         stage('Test') {
             steps {
-                // Install Firefox on Jenkins agent (if it's not already installed)
-                sh 'sudo apt-get update && sudo apt-get install -y firefox'
-                // Alternatively, install Chrome if you prefer:
-                // sh 'sudo apt-get install -y google-chrome-stable'
+                // Manually download and install Firefox (without using sudo)
+                sh 'wget -qO- https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US | tar xj -C /home/jenkins/firefox'
 
-                // Run the tests with npx cucumber-js (use the appropriate browser)
-                sh 'npx cucumber-js features/example_page.feature'
+                // Ensure the Firefox binary is available
+                sh 'export PATH=$PATH:/home/jenkins/firefox/firefox'
+
+                // Run the tests with the correct browser
+                sh 'npx cucumber-js --browsers "firefox" features/example_page.feature'
             }
         }
     }
