@@ -8,6 +8,8 @@ pipeline {
             steps {
                 script {
                     dir("${WORK_DIR}") {
+                        // Clean and reinstall node_modules
+                        sh 'rm -rf node_modules package-lock.json'
                         sh 'npm install'
                     }
                 }
@@ -17,8 +19,8 @@ pipeline {
             steps {
                 script {
                     dir("${WORK_DIR}") {
-                        // Specify the feature file to run
-                        sh './node_modules/.bin/cucumber-js.cmd'
+                        // Run the tests with npx
+                        sh 'npx cucumber-js features/example_page.feature'
                     }
                 }
             }
