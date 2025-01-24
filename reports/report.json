@@ -1,0 +1,135 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Example Page User Details",
+    "line": 1,
+    "id": "example-page-user-details",
+    "tags": [],
+    "uri": "features\\example_page.feature",
+    "elements": [
+      {
+        "id": "example-page-user-details;the-one-where-user-enters-all-the-details-on-example-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "The one where user enters all the details on Example Page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14081000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user navigates to the example form page",
+            "match": {
+              "location": "features\\step_definitions\\example_page_steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1713000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "user enters \"John Doe\" in the name field",
+            "match": {
+              "location": "features\\step_definitions\\example_page_steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 668000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "user selects \"JavaScript API\" as TestCafe Interface",
+            "match": {
+              "location": "features\\step_definitions\\example_page_steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 520000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user checks the I have tried TestCafe checkbox",
+            "match": {
+              "location": "features\\step_definitions\\example_page_steps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 281000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "user enters \"Good Tool\" in feedback description field",
+            "match": {
+              "location": "features\\step_definitions\\example_page_steps.js:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 644000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "user clicks on Submit button",
+            "match": {
+              "location": "features\\step_definitions\\example_page_steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 920000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "\"Thank you, John Doe\" message appears",
+            "match": {
+              "location": "features\\step_definitions\\example_page_steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 89000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features\\support\\hooks.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
