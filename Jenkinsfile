@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Firefox') { 
-            steps {
-                sh 'apt-get update'
-                sh 'apt-get install -y firefox'
-            }
-        }
         stage('Build') { 
             steps {
                 sh 'npm install' 
@@ -14,8 +8,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'apt-get update'
-                sh 'apt-get install -y firefox'
+                sh 'testcafe --list-browsers'
                 sh 'npx cucumber-js features/example_page.feature'
             }
         }
